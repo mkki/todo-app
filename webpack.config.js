@@ -1,6 +1,8 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: ['./src/js/index.js', './src/sass/todo.scss'],
@@ -57,20 +59,32 @@ module.exports = {
                         loader: 'sass-loader',
                     }
                 ]
-            }
+            },
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/todo.css',
-        })
+        }),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [{
+                from: 'src/assets',
+                to: './assets',
+            }],
+        }),
     ],
     optimization: {
         minimize: true,
         minimizer: [
-          new CssMinimizerPlugin(),
+            new CssMinimizerPlugin(),
         ],
-      },
+    },
+    devServer: {
+        contentBase: './dist',
+    },
     devtool: 'source-map',
     mode: 'development',
 };
