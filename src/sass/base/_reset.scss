@@ -1,0 +1,143 @@
+html {
+    font-size: 14px;
+    line-height: 1.5;
+    text-size-adjust: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+[hidden] {
+    display: none;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+dl,
+dt,
+dd,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+button,
+select,
+label {
+    cursor: pointer;
+}
+
+button {
+    padding: 0;
+
+    &[disabled],
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+}
+
+img {
+    vertical-align: top;
+    border-style: none;
+}
+
+input[type="text"]::-ms-clear {
+    display: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
