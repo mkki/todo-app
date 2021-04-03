@@ -1,9 +1,9 @@
-import { Test } from "./test";
+import { Todo } from "./todo";
 
-const test = new Test();
+document.addEventListener("DOMContentLoaded", async () => {
+    const todo = new Todo();
 
-console.log(test.name);
+    await todo.getTodos();
 
-console.log(test.testPromise());
-console.log(test.testObjectAssign());
-console.log(test.testArrayFrom());
+    todo.renderTodos();
+});
