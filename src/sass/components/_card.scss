@@ -1,0 +1,57 @@
+$card-border-color: #eee;
+$card-background-color: #fff;
+
+.card__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+
+    @media screen and (max-width: 767px) {
+        margin: 0;
+    }
+
+    .card__item {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: calc(33.3333% - 20px);
+        padding: 10px;
+        margin: 10px;
+        background-color: $card-background-color;
+        border: 1px solid $card-border-color;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.05);
+        will-change: auto;
+
+        &:hover {
+            transform: scale(1.01);
+            will-change: transform;
+        }
+        
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin: 0;
+
+            & + .card__item {
+                margin-top: 10px;
+            }
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            width: calc(50% - 20px);
+            margin: 10px;
+        }
+
+        .card__link {
+            display: block;
+            color: inherit;
+        }
+
+        .card__title {
+            font-size: 16px;
+        }
+
+        .card__contents {
+            margin-top: 10px;
+        }
+    }
+}
