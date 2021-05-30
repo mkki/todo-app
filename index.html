@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
     <title>Sample List</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
-            <button type="button" class="header__switch-sidebar" aria-hidden="true">
+            <button type="button" class="header__switch-sidebar" aria-pressed="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
                     <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
                 </svg>
+                <i class="blind">sidebar toggle</i>
             </button>
 
             <h1 class="header__title">Sample Todo App</h1>
         </header>
         
         <main class="container">
-            <section class="contents">
-                <ul class="card__list">
-                    
-                </ul>
+            <section class="contents-header">
+                <form class="todo-form">
+                    <div class="todo-form__input-wrapper">
+                        <input type="text" class="todo-form__input" placeholder="Enter a task">
+                        <button type="button" class="todo-form__button">ADD</button>
+                    </div>
+                </form>
             </section>
-
-            <aside class="category">
-
-            </aside>
+            <section class="contents-body">
+               
+            </section>
         </main>
-        <footer>
-            
-        </footer>
     </div>
 </body>
 </html>
