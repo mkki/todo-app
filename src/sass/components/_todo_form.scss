@@ -1,0 +1,40 @@
+.todo-form {
+    .todo-form__input-wrapper {
+        display: flex;
+    }
+
+    .todo-form__input {
+        flex: 1 1 auto;
+        display: inline-block;
+        min-width: 0;
+        padding: 7px 10px;
+        line-height: 20px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        outline: none;
+
+        @media screen and (min-width: 768px) {
+            flex: 0 1 auto;
+            width: 300px;
+        }
+
+        &:focus {
+            border-color: #ddd;
+        }
+
+        & + .todo-form__button {
+            margin-left: 8px;
+        }
+
+        &::placeholder{
+            color: #aaa;
+        }
+    }
+    
+    .todo-form__button {
+        flex: 0 0 auto;
+        background-color: transparent;
+        border: 0;
+        font-weight: bold;
+    }
+}
