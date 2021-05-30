@@ -12,7 +12,10 @@ $card-background-color: #fff;
 
     .card__item {
         box-sizing: border-box;
+        position: relative;
         flex: 0 0 auto;
+        display: flex;
+        align-items: center;
         width: calc(33.3333% - 20px);
         padding: 10px;
         margin: 10px;
@@ -21,7 +24,7 @@ $card-background-color: #fff;
         border-radius: 5px;
         box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.05);
         will-change: auto;
-
+        
         &:hover {
             transform: scale(1.01);
             will-change: transform;
@@ -30,7 +33,7 @@ $card-background-color: #fff;
         @media screen and (max-width: 767px) {
             width: 100%;
             margin: 0;
-
+            
             & + .card__item {
                 margin-top: 10px;
             }
@@ -40,18 +43,63 @@ $card-background-color: #fff;
             width: calc(50% - 20px);
             margin: 10px;
         }
-
-        .card__link {
-            display: block;
-            color: inherit;
-        }
-
+        
         .card__title {
+            flex: 1 1 auto;
+            padding: 6px 0;
             font-size: 16px;
         }
+        
+        .card__input {
+            flex: 1 1 auto;
+            display: none;
+            min-width: 0;
+            padding: 7px 10px;
+            line-height: 20px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            outline: none;
 
-        .card__contents {
-            margin-top: 10px;
+            &:focus {
+                border-color: #ddd;
+            }
+
+            &::placeholder{
+                color: #aaa;
+            }
+        }
+
+        .card__edit {
+            flex: 0 0 auto;
+            display: inline-block;
+            padding: 6px;
+            background-color: transparent;
+            border: 0;
+            line-height: 12px;
+        }
+        
+        .card__remove {
+            flex: 0 0 auto;
+            display: inline-block;
+            padding: 6px;
+            background-color: transparent;
+            border: 0;
+            line-height: 12px;
+
+            svg {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        &.editing {
+            .card__title {
+                display: none;
+            }
+            
+            .card__input {
+                display: block;
+            }
         }
     }
 }
