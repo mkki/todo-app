@@ -12,22 +12,25 @@
 
 .container {
     display: flex;
-    flex: 1 0 auto;
+    flex-direction: column;
+    flex: 1 1 auto;
     padding: 0 16px;
     
-    .contents {
+    .contents-header {
+        flex: 0 0 auto;
+        padding: 20px 0;
+    }
+
+    .contents-body {
         flex: 1 1 auto;
+
+        .message {
+            padding: 50px 10px;
+            text-align: center;
+        }
     }
 
     .category {
         flex: 0 0 auto;
     }
-}
-
-.button-add,
-.button-delete {
-    display: inline-block;
-    padding: 5px;
-    border: 0;
-    background-color: transparent;
 }
