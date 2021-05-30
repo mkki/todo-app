@@ -1,8 +1,12 @@
 {
     "todos": [
         {
-            "title": "todo 1",
-            "content": "hello todo"
+            "uuid": "f0520d5d-8763-4a77-ae6a-e2b659b1e3d1",
+            "title": "todo 1"
+        },
+        {
+            "uuid": "d7bdb8d5-b168-4acf-a657-33cb391f6d92",
+            "title": "todo 2"
         }
     ]
 }
