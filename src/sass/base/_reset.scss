@@ -27,11 +27,16 @@ textarea {
 button,
 input {
     overflow: visible;
+    touch-action: manipulation;
 }
 
 button,
 select {
     text-transform: none;
+}
+
+input[type="text"] {
+    appearance: none;
 }
 
 button,
